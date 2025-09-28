@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 5px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 1500px;
+}
+
+header h1 {
+    color: red;
+    font-size: 2em;
+    margin: 0;
+}
+
+header p {
+    color: #666;
+    font-size: 1.2em;
+    margin: 5px 0 0;
+}
+
+.candidates {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.paslon {
+    border: 4px solid #333;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 180px;
+    width: 100%;
+    min-width: 500px;
+}
+
+.paslon img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 25px;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.paslon .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.paslon h2 {
+    margin: 0 0 5px;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.paslon p {
+    margin: 0 0 10px;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.paslon .vote-section {
+    display: flex;
+    align-items: center;
+}
+
+.paslon input[type="radio"] {
+    margin-right: 5px;
+}
+
+.paslon label {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.voting-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.results-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+#voteCounts {
+    font-size: 1.2em;
+}
+
+#voteBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.3em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#voteBtn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .candidates {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .paslon {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .paslon img {
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .paslon .content {
+        text-align: center;
+    }
+
+    .voting-section {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 15px;
+    }
+
+    #voteBtn {
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+
+    body {
+        padding: 5px;
+    }
+}
